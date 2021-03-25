@@ -1,0 +1,50 @@
+C:\Users\user\AppData\Local\Temporary Projects\KME\bin\Debug\KME.exe
+C:\Users\user\AppData\Local\Temporary Projects\KME\bin\Debug\KME.pdb
+C:\Users\user\AppData\Local\Temporary Projects\KME\obj\x86\Debug\KME.Form1.resources
+C:\Users\user\AppData\Local\Temporary Projects\KME\obj\x86\Debug\KME.Properties.Resources.resources
+C:\Users\user\AppData\Local\Temporary Projects\KME\obj\x86\Debug\KME.csproj.GenerateResource.Cache
+C:\Users\user\AppData\Local\Temporary Projects\KME\obj\x86\Debug\KME.exe
+C:\Users\user\AppData\Local\Temporary Projects\KME\obj\x86\Debug\KME.pdb
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.exe
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.pdb
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\bin\Debug\KME.exe
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\bin\Debug\KME.pdb
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Form1.resources
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Properties.Resources.resources
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.csproj.GenerateResource.Cache
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Day.resources
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Months.resources
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.MessageList.resources
+C:\Users\user\documents\visual studio 2010\Projects\KME\KME\obj\x86\Debug\KME.MessageView.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.DeleteForm.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.AddRedact.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Text_kusock.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.ContextMenu.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.Form2.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.check_kusock.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME\KME\obj\x86\Debug\KME.DateTimeViev.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\KME.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\KME.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.AddRedact.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.ContextMenu.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.check_kusock.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.DateTimeViev.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.Day.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.DeleteForm.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.Form1.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.MessageList.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.MessageView.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.Months.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.Text_kusock.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.csproj.GenerateResource.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\KME.exe.config
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\KME.exe.manifest
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\bin\Debug\KME.application
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.exe.manifest
+C:\Users\user\Documents\Visual Studio 2010\Projects\KME2\KME\obj\x86\Debug\KME.application
