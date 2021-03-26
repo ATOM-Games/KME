@@ -26,33 +26,33 @@ namespace KME
             InitializeComponent();
             this.localMessage = MessageControl.msContr.messages[indes];
             oldID = indes;
-            this.Zagalovok.Text = MessageControl.msContr.messages[indes].Zagalovok;
-            this.Glavnaya.Checked = MessageControl.msContr.messages[indes].Vajnoe;
+            this.TittleName.Text = MessageControl.msContr.messages[indes].TittleName;
+            this.MainText.Checked = MessageControl.msContr.messages[indes].MainMessage;
             this.ThisMeessageDateTime = MessageControl.msContr.messages[indes].TimeDate;
             foreach (TextBody txtbd in MessageControl.msContr.messages[indes].Textes)
             {
                 if (txtbd.GetType().ToString() == "KME.TextBody")
                 {
-                    Text_kusock txtk = new Text_kusock(this);
-                    txtk.Dock = DockStyle.Bottom;
-                    txtk.Margin = new System.Windows.Forms.Padding(5);
-                    txtk.AutoSize = true;
-                    txtk.textBox1.Text = txtbd.sTextBody;
-                    txtk.lasee.MaximumSize = new Size(this.Size.Width, 10000);
-                    this.Resize += new EventHandler(delegate { txtk.lasee.MaximumSize = new Size(txtk.Size.Width, 10000); });
-                    this.inWorkPage.Controls.Add(txtk);
+                    Text_kusock txt = new Text_kusock(this);
+                    txt.Dock = DockStyle.Bottom;
+                    txt.Margin = new System.Windows.Forms.Padding(5);
+                    txt.AutoSize = true;
+                    txt.textBox1.Text = txtbd.sTextBody;
+                    txt.LabelLocale.MaximumSize = new Size(this.Size.Width, 10000);
+                    this.Resize += new EventHandler(delegate { txt.LabelLocale.MaximumSize = new Size(txt.Size.Width, 10000); });
+                    this.inWorkPage.Controls.Add(txt);
                 }
                 if (txtbd.GetType().ToString() == "KME.CheckBody")
                 {
-                    check_kusock txtk = new check_kusock(this);
-                    txtk.Dock = DockStyle.Bottom;
-                    txtk.Margin = new System.Windows.Forms.Padding(5);
-                    txtk.AutoSize = true;
-                    txtk.textBox1.Text = ((CheckBody)txtbd).sTextBody;
-                    txtk.chchchcl.Checked = ((CheckBody)txtbd).bCheckBody;
-                    txtk.lasee.MaximumSize = new Size(this.Size.Width - 15, 10000);
-                    this.Resize += new EventHandler(delegate { txtk.lasee.MaximumSize = new Size(txtk.Size.Width - 15, 10000); });
-                    this.inWorkPage.Controls.Add(txtk);
+                    check_kusock ch_txt = new check_kusock(this);
+                    ch_txt.Dock = DockStyle.Bottom;
+                    ch_txt.Margin = new System.Windows.Forms.Padding(5);
+                    ch_txt.AutoSize = true;
+                    ch_txt.textBox1.Text = ((CheckBody)txtbd).sTextBody;
+                    ch_txt.check_.Checked = ((CheckBody)txtbd).bCheckBody;
+                    ch_txt.LabelLocal.MaximumSize = new Size(this.Size.Width - 15, 10000);
+                    this.Resize += new EventHandler(delegate { ch_txt.LabelLocal.MaximumSize = new Size(ch_txt.Size.Width - 15, 10000); });
+                    this.inWorkPage.Controls.Add(ch_txt);
                 }
             }
             SetTextButtonDateTime();
@@ -64,29 +64,29 @@ namespace KME
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            TextBody[] txtxttx = new TextBody[this.inWorkPage.Controls.Count];
+            TextBody[] bd_txt = new TextBody[this.inWorkPage.Controls.Count];
             int t = 0;
             foreach (Control cntr in this.inWorkPage.Controls)
             {
                 if (cntr.GetType().ToString() == "KME.check_kusock")
                 {
-                    txtxttx[t] = new CheckBody(((check_kusock)cntr).textBox1.Text, ((check_kusock)cntr).chchchcl.Checked);
+                    bd_txt[t] = new CheckBody(((check_kusock)cntr).textBox1.Text, ((check_kusock)cntr).check_.Checked);
                     t++;
                 }
                 if (cntr.GetType().ToString() == "KME.Text_kusock")
                 {
-                    txtxttx[t] = new TextBody(((Text_kusock)cntr).textBox1.Text);
+                    bd_txt[t] = new TextBody(((Text_kusock)cntr).textBox1.Text);
                     t++;
                 }
             }
             if (localMessage!=null)
             {
-                localMessage.SetNewMessage(this.Zagalovok.Text, this.Glavnaya.Checked, this.ThisMeessageDateTime, txtxttx);
+                localMessage.SetNewMessage(this.TittleName.Text, this.MainText.Checked, this.ThisMeessageDateTime, bd_txt);
                 MessageControl.msContr.RedactMessage(localMessage, oldID);
             }
             else
             {
-                localMessage = new Message(this.Zagalovok.Text, this.Glavnaya.Checked, this.ThisMeessageDateTime, txtxttx);
+                localMessage = new Message(this.TittleName.Text, this.MainText.Checked, this.ThisMeessageDateTime, bd_txt);
                 MessageControl.msContr.AdddMessade(localMessage);
             }
             this.Close();
@@ -94,23 +94,23 @@ namespace KME
 
         public void AddChek_Click(object sender, EventArgs e)
         {
-            check_kusock txtk = new check_kusock(this);
-            txtk.Dock = DockStyle.Bottom;
-            txtk.Margin = new System.Windows.Forms.Padding(5);
-            txtk.AutoSize = true;
-            txtk.lasee.MaximumSize = new Size(this.Size.Width - 15, 10000);
-            this.Resize += new EventHandler(delegate { txtk.lasee.MaximumSize = new Size(txtk.Size.Width - 15, 10000); });
-            this.inWorkPage.Controls.Add(txtk);
+            check_kusock ch_txt = new check_kusock(this);
+            ch_txt.Dock = DockStyle.Bottom;
+            ch_txt.Margin = new System.Windows.Forms.Padding(5);
+            ch_txt.AutoSize = true;
+            ch_txt.LabelLocal.MaximumSize = new Size(this.Size.Width - 15, 10000);
+            this.Resize += new EventHandler(delegate { ch_txt.LabelLocal.MaximumSize = new Size(ch_txt.Size.Width - 15, 10000); });
+            this.inWorkPage.Controls.Add(ch_txt);
         }
         public void AddText_Click(object sender, EventArgs e)
         {
-            Text_kusock txtk = new Text_kusock(this);
-            txtk.Dock = DockStyle.Bottom;
-            txtk.Margin = new System.Windows.Forms.Padding(5);
-            txtk.AutoSize = true;
-            txtk.lasee.MaximumSize = new Size(this.Size.Width, 10000);
-            this.Resize += new EventHandler(delegate { txtk.lasee.MaximumSize = new Size(txtk.Size.Width, 10000); });
-            this.inWorkPage.Controls.Add(txtk);
+            Text_kusock txt = new Text_kusock(this);
+            txt.Dock = DockStyle.Bottom;
+            txt.Margin = new System.Windows.Forms.Padding(5);
+            txt.AutoSize = true;
+            txt.LabelLocale.MaximumSize = new Size(this.Size.Width, 10000);
+            this.Resize += new EventHandler(delegate { txt.LabelLocale.MaximumSize = new Size(txt.Size.Width, 10000); });
+            this.inWorkPage.Controls.Add(txt);
         }
 
         private void Plus_Click(object sender, EventArgs e)

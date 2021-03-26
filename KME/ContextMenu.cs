@@ -11,29 +11,29 @@ namespace KME
 {
     public partial class ContextMenu : Form
     {
-        Panel wie; Button sss; AddRedact sa;
+        Panel wie; Button but; AddRedact adRe;
         public ContextMenu(Button btn, Panel workses, AddRedact s)
         {
             InitializeComponent();
             this.Location = new Point((Cursor.Position.X), (Cursor.Position.Y));
-            this.sa = s;
-            this.Tooleann.SetToolTip(this.StringButton, "Создать обычную строку");
-            this.Tooleann.SetToolTip(this.CheckButtom, "Создать галочку");
+            this.adRe = s;
+            this.Tool_.SetToolTip(this.StringButton, "Создать обычную строку");
+            this.Tool_.SetToolTip(this.CheckButtom, "Создать галочку");
             this.wie = workses;
-            this.sss = btn;
-            sss.Enabled = false;
+            this.but = btn;
+            but.Enabled = false;
         }
 
         private void StringButton_Click(object sender, EventArgs e)
         {
-            sa.AddText_Click(sender, e);
-            sss.Enabled = true;
+            adRe.AddText_Click(sender, e);
+            but.Enabled = true;
             this.Close();
         }
         private void CheckButtom_Click(object sender, EventArgs e)
         {
-            sa.AddChek_Click(sender, e);
-            sss.Enabled = true;
+            adRe.AddChek_Click(sender, e);
+            but.Enabled = true;
             this.Close();
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Calendar = new System.Windows.Forms.MonthCalendar();
-            this.labla = new System.Windows.Forms.Label();
+            this.LabelLocal = new System.Windows.Forms.Label();
             this.NumHourh = new System.Windows.Forms.NumericUpDown();
             this.NumMinute = new System.Windows.Forms.NumericUpDown();
             this.NumSecunde = new System.Windows.Forms.NumericUpDown();
@@ -49,14 +49,14 @@
             // 
             // labla
             // 
-            this.labla.AutoSize = true;
-            this.labla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labla.Location = new System.Drawing.Point(176, 39);
-            this.labla.Name = "labla";
-            this.labla.Size = new System.Drawing.Size(104, 72);
-            this.labla.TabIndex = 1;
-            this.labla.Text = "Час :\r\nМинута :\r\nСекунда :\r\n";
-            this.labla.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.LabelLocal.AutoSize = true;
+            this.LabelLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelLocal.Location = new System.Drawing.Point(176, 39);
+            this.LabelLocal.Name = "labla";
+            this.LabelLocal.Size = new System.Drawing.Size(104, 72);
+            this.LabelLocal.TabIndex = 1;
+            this.LabelLocal.Text = "Час :\r\nМинута :\r\nСекунда :\r\n";
+            this.LabelLocal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // NumHourh
             // 
@@ -124,7 +124,7 @@
             this.Controls.Add(this.NumSecunde);
             this.Controls.Add(this.NumMinute);
             this.Controls.Add(this.NumHourh);
-            this.Controls.Add(this.labla);
+            this.Controls.Add(this.LabelLocal);
             this.Controls.Add(this.Calendar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DateTimeViev";
@@ -140,7 +140,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labla;
+        private System.Windows.Forms.Label LabelLocal;
         private System.Windows.Forms.Button ResetButtom;
         private System.Windows.Forms.Button OkButton;
         public System.Windows.Forms.NumericUpDown NumHourh;

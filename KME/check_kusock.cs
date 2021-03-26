@@ -14,10 +14,10 @@ namespace KME
 
         AddRedact addred;
 
-        public check_kusock(AddRedact ss)
+        public check_kusock(AddRedact ar)
         {
             InitializeComponent();
-            this.addred = ss;
+            this.addred = ar;
 
         }
 

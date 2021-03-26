@@ -18,7 +18,7 @@ namespace KME
         }
         public int _selectYearh, _selectMonth, _selectDay;
         public void SetZagalovok(int _yer, int _mont, int _day) {
-            this.Zagalovok.Text = _day + " " + Months.Monthes[_mont, 1] + " " + _yer + " года";
+            this.TittleName.Text = _day + " " + Months.Monthes[_mont, 1] + " " + _yer + " года";
             this._selectYearh = _yer; this._selectMonth = _mont; this._selectDay = _day;
             MessageControl.msContr.FilterToDate(new DateTime(_selectYearh, _selectMonth, _selectDay));
         }
@@ -27,17 +27,17 @@ namespace KME
         {
             if (this.findTextBox.Text.Length > 0)
             {
-                foreach (MessageView mees in MessageControl.msContr.Spisok.Controls)
+                foreach (MessageView messages in MessageControl.msContr.ListStrings.Controls)
                 {
-                    mees.Visible = (mees.Zagalovok.Text.Contains(this.findTextBox.Text));
+                    messages.Visible = (messages.TittleName.Text.Contains(this.findTextBox.Text));
                 }
             }
         }
 
         private void ArchiveButton_Click(object sender, EventArgs e)
         {
-            foreach(MessageView mees in MessageControl.msContr.Spisok.Controls){
-                mees.Visible = (mees.Zagalovok.BackColor == Color.Red && mees.thisDateTime < DateTime.Now);
+            foreach(MessageView messages in MessageControl.msContr.ListStrings.Controls){
+                messages.Visible = (messages.TittleName.BackColor == Color.Red && messages.thisDateTime < DateTime.Now);
             }
         }
 
@@ -46,12 +46,12 @@ namespace KME
                 this.MainMenuPanel.Height = 30;
                 this.ArchiveButton.Location = new Point(245, 3);
                 this.AllMessages.Location = new Point(326, 3);
-                this.AdNeMe.Location = new Point(427, 3);
+                this.AddNotMe.Location = new Point(427, 3);
             } else {
                 this.MainMenuPanel.Height = 50;
                 this.ArchiveButton.Location = new Point(3,25);
                 this.AllMessages.Location = new Point(84, 25);
-                this.AdNeMe.Location = new Point(185, 25);
+                this.AddNotMe.Location = new Point(185, 25);
             }
             MessageControl.msContr.ResizeAllText();
         }

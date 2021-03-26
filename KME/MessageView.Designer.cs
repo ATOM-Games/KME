@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PanZagalovok = new System.Windows.Forms.Panel();
-            this.Zagalovok = new System.Windows.Forms.Label();
+            this.Panel_TittleName = new System.Windows.Forms.Panel();
+            this.TittleName = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.Redact = new System.Windows.Forms.Button();
-            this.Vremya = new System.Windows.Forms.Label();
+            this.TimeLocal = new System.Windows.Forms.Label();
             this.TImeMeess = new System.Windows.Forms.ToolTip(this.components);
             this.ContentMessage = new System.Windows.Forms.Panel();
-            this.PanZagalovok.SuspendLayout();
+            this.Panel_TittleName.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanZagalovok
             // 
-            this.PanZagalovok.Controls.Add(this.Zagalovok);
-            this.PanZagalovok.Controls.Add(this.Delete);
-            this.PanZagalovok.Controls.Add(this.Redact);
-            this.PanZagalovok.Controls.Add(this.Vremya);
-            this.PanZagalovok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanZagalovok.Location = new System.Drawing.Point(2, 2);
-            this.PanZagalovok.Name = "PanZagalovok";
-            this.PanZagalovok.Size = new System.Drawing.Size(346, 20);
-            this.PanZagalovok.TabIndex = 2;
+            this.Panel_TittleName.Controls.Add(this.TittleName);
+            this.Panel_TittleName.Controls.Add(this.Delete);
+            this.Panel_TittleName.Controls.Add(this.Redact);
+            this.Panel_TittleName.Controls.Add(this.TimeLocal);
+            this.Panel_TittleName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_TittleName.Location = new System.Drawing.Point(2, 2);
+            this.Panel_TittleName.Name = "PanZagalovok";
+            this.Panel_TittleName.Size = new System.Drawing.Size(346, 20);
+            this.Panel_TittleName.TabIndex = 2;
             // 
             // Zagalovok
             // 
-            this.Zagalovok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Zagalovok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Zagalovok.Location = new System.Drawing.Point(40, 0);
-            this.Zagalovok.Name = "Zagalovok";
-            this.Zagalovok.Size = new System.Drawing.Size(206, 20);
-            this.Zagalovok.TabIndex = 0;
-            this.Zagalovok.Text = "Загаловок";
-            this.Zagalovok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TittleName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TittleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TittleName.Location = new System.Drawing.Point(40, 0);
+            this.TittleName.Name = "Zagalovok";
+            this.TittleName.Size = new System.Drawing.Size(206, 20);
+            this.TittleName.TabIndex = 0;
+            this.TittleName.Text = "Загаловок";
+            this.TittleName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Delete
             // 
@@ -86,14 +86,14 @@
             // 
             // Vremya
             // 
-            this.Vremya.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Vremya.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Vremya.Location = new System.Drawing.Point(246, 0);
-            this.Vremya.Name = "Vremya";
-            this.Vremya.Size = new System.Drawing.Size(100, 20);
-            this.Vremya.TabIndex = 1;
-            this.Vremya.Text = "Время";
-            this.Vremya.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TimeLocal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.TimeLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeLocal.Location = new System.Drawing.Point(246, 0);
+            this.TimeLocal.Name = "Vremya";
+            this.TimeLocal.Size = new System.Drawing.Size(100, 20);
+            this.TimeLocal.TabIndex = 1;
+            this.TimeLocal.Text = "Время";
+            this.TimeLocal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TImeMeess
             // 
@@ -115,23 +115,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ContentMessage);
-            this.Controls.Add(this.PanZagalovok);
+            this.Controls.Add(this.Panel_TittleName);
             this.Name = "MessageView";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(350, 70);
-            this.PanZagalovok.ResumeLayout(false);
+            this.Panel_TittleName.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel PanZagalovok;
-        private System.Windows.Forms.Label Vremya;
+        private System.Windows.Forms.Panel Panel_TittleName;
+        private System.Windows.Forms.Label TimeLocal;
         private System.Windows.Forms.ToolTip TImeMeess;
         private System.Windows.Forms.Panel ContentMessage;
         private System.Windows.Forms.Button Redact;
         private System.Windows.Forms.Button Delete;
-        public System.Windows.Forms.Label Zagalovok;
+        public System.Windows.Forms.Label TittleName;
     }
 }

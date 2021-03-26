@@ -28,7 +28,7 @@ namespace KME
                                       {"Декабрь", "Декабря"} };
         public int _MONTH = -1, _YEARH = -1;
         DateTime dt;
-        public Form1 Thisa;
+        public Form1 This_at;
         public Months(Form1 fm1)
         {
             InitializeComponent(fm1);

@@ -41,6 +41,7 @@
             this.OkBUT.TabIndex = 0;
             this.OkBUT.Text = "OK";
             this.OkBUT.UseVisualStyleBackColor = true;
+            this.OkBUT.Click += new System.EventHandler(this.OkBUT_Click);
             // 
             // label1
             // 

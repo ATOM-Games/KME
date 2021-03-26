@@ -36,8 +36,8 @@ namespace KME
             this.Title = new System.Windows.Forms.Label();
             this.IConBox = new System.Windows.Forms.PictureBox();
             this.ExitButPan = new System.Windows.Forms.Panel();
-            this.Svern_button = new System.Windows.Forms.Button();
-            this.Razs_button = new System.Windows.Forms.Button();
+            this.Svn_button = new System.Windows.Forms.Button();
+            this.Rzs_button = new System.Windows.Forms.Button();
             this.Exit_button = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LeftPanel = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@ namespace KME
             this.YearhButton = new System.Windows.Forms.Button();
             this.NumericYearh = new System.Windows.Forms.NumericUpDown();
             this.PanelOfYearh2 = new System.Windows.Forms.Panel();
-            this.Lokac_timer = new System.Windows.Forms.Timer();
+            this.Local_timer = new System.Windows.Forms.Timer();
             this._yeahrs_ = new System.Windows.Forms.Button[201];
             this.MessList = new MessageList();
             this.LocalMonth = new KME.Months(this);
@@ -80,7 +80,7 @@ namespace KME
             this.Title.Text = "Календарь - \"Мой Ежедневник\"";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Zagolovok_down);
-            this.Title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Zagolovok_Click);
+            this.Title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TittleName_Click);
             this.Title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Zagolovok_up);
             // 
             // IConBox
@@ -97,8 +97,8 @@ namespace KME
             // 
             // ExitButPan
             // 
-            this.ExitButPan.Controls.Add(this.Svern_button);
-            this.ExitButPan.Controls.Add(this.Razs_button);
+            this.ExitButPan.Controls.Add(this.Svn_button);
+            this.ExitButPan.Controls.Add(this.Rzs_button);
             this.ExitButPan.Controls.Add(this.Exit_button);
             this.ExitButPan.Dock = System.Windows.Forms.DockStyle.Right;
             this.ExitButPan.Location = new System.Drawing.Point(740, 0);
@@ -108,14 +108,14 @@ namespace KME
             // 
             // Svern_button
             // 
-            this.Svern_button.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Svern_button.Location = new System.Drawing.Point(0, 0);
-            this.Svern_button.Name = "Svern_button";
-            this.Svern_button.Size = new System.Drawing.Size(20, 20);
-            this.Svern_button.TabIndex = 2;
-            this.Svern_button.Text = "-";
-            this.Svern_button.UseVisualStyleBackColor = true;
-            this.Svern_button.Click += new System.EventHandler(this.Svern_button_Click);
+            this.Svn_button.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Svn_button.Location = new System.Drawing.Point(0, 0);
+            this.Svn_button.Name = "Svern_button";
+            this.Svn_button.Size = new System.Drawing.Size(20, 20);
+            this.Svn_button.TabIndex = 2;
+            this.Svn_button.Text = "-";
+            this.Svn_button.UseVisualStyleBackColor = true;
+            this.Svn_button.Click += new System.EventHandler(this.Svern_button_Click);
             // 
             // Razs_button
             // 
@@ -143,13 +143,13 @@ namespace KME
             this.NumericYearh.RegionChanged += new System.EventHandler(NumericYearh_ChangeUICues);
             
 
-            this.Razs_button.Location = new System.Drawing.Point(20, 0);
-            this.Razs_button.Name = "Razs_button";
-            this.Razs_button.Size = new System.Drawing.Size(20, 20);
-            this.Razs_button.TabIndex = 1;
-            this.Razs_button.Text = "=";
-            this.Razs_button.UseVisualStyleBackColor = true;
-            this.Razs_button.Click += new System.EventHandler(this.Razs_button_Click);
+            this.Rzs_button.Location = new System.Drawing.Point(20, 0);
+            this.Rzs_button.Name = "Razs_button";
+            this.Rzs_button.Size = new System.Drawing.Size(20, 20);
+            this.Rzs_button.TabIndex = 1;
+            this.Rzs_button.Text = "=";
+            this.Rzs_button.UseVisualStyleBackColor = true;
+            this.Rzs_button.Click += new System.EventHandler(this.Razs_button_Click);
             // 
             // Exit_button
             // 
@@ -238,8 +238,8 @@ namespace KME
             this.YearhButton.Click += new System.EventHandler(this.YearhButton_Click);
 
 
-            this.Lokac_timer.Interval = 1000;
-            this.Lokac_timer.Tick += new System.EventHandler(Lokac_timer_Tick);
+            this.Local_timer.Interval = 1000;
+            this.Local_timer.Tick += new System.EventHandler(Local_timer_Tick);
             // 
             // ss
             // 
@@ -286,8 +286,8 @@ namespace KME
 
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Button Exit_button;
-        private System.Windows.Forms.Button Razs_button;
-        private System.Windows.Forms.Button Svern_button;
+        private System.Windows.Forms.Button Rzs_button;
+        private System.Windows.Forms.Button Svn_button;
         private System.Windows.Forms.Panel ExitButPan;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.PictureBox IConBox;
@@ -302,7 +302,7 @@ namespace KME
         private System.Windows.Forms.Button[] _yeahrs_;
         private System.Windows.Forms.NumericUpDown NumericYearh;
         private MessageList MessList;
-        private System.Windows.Forms.Timer Lokac_timer;
+        private System.Windows.Forms.Timer Local_timer;
         //public NotifyIcon PushUvedoml;
     }
 }

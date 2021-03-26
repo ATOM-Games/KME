@@ -14,7 +14,7 @@ namespace KME
             yerhcolor = Color.SkyBlue;
             foreach (Message ms in MessageControl.msContr.messages) {
                 if (ms.TimeDate.Year == yearh) {
-                    if (ms.Vajnoe) {
+                    if (ms.MainMessage) {
                         if (yerhcolor != Color.Red) { yerhcolor = Color.Red; }
                     } else {
                         if (yerhcolor != Color.Red) { yerhcolor = Color.Blue; }
@@ -28,7 +28,7 @@ namespace KME
             monthcolor = Color.SkyBlue;
             foreach (Message ms in MessageControl.msContr.messages) {
                 if (ms.TimeDate.Year == Form1._YEARH && ms.TimeDate.Month == month+1) {
-                    if (ms.Vajnoe) {
+                    if (ms.MainMessage) {
                         if (monthcolor != Color.Red) { monthcolor = Color.Red; }
                     } else {
                         if (monthcolor != Color.Red) { monthcolor = Color.Blue; }
@@ -46,7 +46,7 @@ namespace KME
                 } else {
                     foreach (Message ms in MessageControl.msContr.messages) {
                         if (Form1._YEARH == ms.TimeDate.Year && Form1._MONTH == ms.TimeDate.Month && int.Parse(day) == ms.TimeDate.Day) {
-                            if (ms.Vajnoe) {
+                            if (ms.MainMessage) {
                                 if (daycolor != Color.Red) { daycolor = Color.Red; }
                             } else {
                                 if (daycolor != Color.Red) { daycolor = Color.Blue; }

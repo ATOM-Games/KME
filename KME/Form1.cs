@@ -26,16 +26,16 @@ namespace KME
             Form1._MONTH = DateTime.Now.Month;
             Form1._YEARH = DateTime.Now.Year;
             Form1._DAY = DateTime.Now.Day;
-            MessageControl.msContr.Spisok = this.MessList.PoleLista;
+            MessageControl.msContr.ListStrings = this.MessList.FieldList;
             this.MessList.Application = this;
             MessageControl.msContr.OpenFile();//.TextTest();
             //MessageControl.msContr.sTextTest();
-            this.LocalMonth.Thisa = this;
+            this.LocalMonth.This_at = this;
             this.LocalMonth.SetMonthAndYearh(Form1._YEARH, Form1._MONTH);
             this.MessList.SetZagalovok(Form1._YEARH, Form1._MONTH, DateTime.Now.Day);
             
             //---
-            this.Lokac_timer.Start();
+            this.Local_timer.Start();
         }
 
         private void Exit_button_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace KME
             this.TopMost = false;
         }
 
-        private void Zagolovok_Click(object sender, EventArgs e)
+        private void TittleName_Click(object sender, EventArgs e)
         {
             if (thisdvig == true) this.Location = new Point((Cursor.Position.X - this.Size.Width / 2), (Cursor.Position.Y - 10));
         }
@@ -113,7 +113,7 @@ namespace KME
             this.MessList.SetZagalovok(_YEARH, _MONTH, _DAY);
         }
 
-        public void Lokac_timer_Tick(object sender, EventArgs e) {
+        public void Local_timer_Tick(object sender, EventArgs e) {
             this.LocalMonth.Update();
             //----forYearh
             for (int y = 0; y < 200; y++) {
@@ -129,31 +129,31 @@ namespace KME
             }
             //----уведомления
             foreach (Message mess in MessageControl.msContr.messages) {
-                if (mess.Vajnoe) {
+                if (mess.MainMessage) {
                     if (TwoDay(mess.TimeDate))
                     {
-                        this.MessList.PushUvedoml.Visible = true;
-                        this.MessList.PushUvedoml.ShowBalloonTip(5000, "КME осталось 48 часов",
-                            "До события \""+mess.Zagalovok+"\" осталось 48 часов",
+                        this.MessList.PushActives.Visible = true;
+                        this.MessList.PushActives.ShowBalloonTip(5000, "КME осталось 48 часов",
+                            "До события \""+mess.TittleName+"\" осталось 48 часов",
                             ToolTipIcon.Warning);
-                        this.MessList.PushUvedoml.BalloonTipTitle = "КME осталось 48 часов";
+                        this.MessList.PushActives.BalloonTipTitle = "КME осталось 48 часов";
                     }
                     if (OneDay(mess.TimeDate))
                     {
-                        this.MessList.PushUvedoml.Visible = true;
-                        this.MessList.PushUvedoml.ShowBalloonTip(5000, "КME осталось 24 часа",
-                            "До события \"" + mess.Zagalovok + "\" осталось 24 часа",
+                        this.MessList.PushActives.Visible = true;
+                        this.MessList.PushActives.ShowBalloonTip(5000, "КME осталось 24 часа",
+                            "До события \"" + mess.TittleName + "\" осталось 24 часа",
                             ToolTipIcon.Warning);
-                        this.MessList.PushUvedoml.BalloonTipTitle = "КME осталось 24 часа";
+                        this.MessList.PushActives.BalloonTipTitle = "КME осталось 24 часа";
                     }
                     if (OneHourh(mess.TimeDate))
                     {
                         //MessageBox.Show("s");
-                        this.MessList.PushUvedoml.Visible = true;
-                        this.MessList.PushUvedoml.ShowBalloonTip(5000, "КME остался 1 час",
-                            "До события \"" + mess.Zagalovok + "\" остался 1 час",
+                        this.MessList.PushActives.Visible = true;
+                        this.MessList.PushActives.ShowBalloonTip(5000, "КME остался 1 час",
+                            "До события \"" + mess.TittleName + "\" остался 1 час",
                             ToolTipIcon.Warning);
-                        this.MessList.PushUvedoml.BalloonTipTitle = "КME остался 1 час";
+                        this.MessList.PushActives.BalloonTipTitle = "КME остался 1 час";
                     }
                 }
             }

@@ -32,7 +32,7 @@
         {
             this.StringButton = new System.Windows.Forms.PictureBox();
             this.CheckButtom = new System.Windows.Forms.PictureBox();
-            this.Tooleann = new System.Windows.Forms.ToolTip();
+            this.Tool_ = new System.Windows.Forms.ToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.StringButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckButtom)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolTip Tooleann;
+        private System.Windows.Forms.ToolTip Tool_;
         private System.Windows.Forms.PictureBox StringButton;
         private System.Windows.Forms.PictureBox CheckButtom;
     }

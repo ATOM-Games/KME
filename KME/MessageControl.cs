@@ -16,7 +16,7 @@ namespace KME
         static public MessageControl msContr;
         static public void SetControl() { msContr = new MessageControl(); }
         public List<Message> messages = new List<Message>();
-        public Panel Spisok;
+        public Panel ListStrings;
         public string Address = "C://ABCGames/Dnevnik.abcplr";
         
         public void sTextTest() {
@@ -29,29 +29,29 @@ namespace KME
         }
 
         public void SpawnAllMessages() {
-            Spisok.Controls.Clear();
+            ListStrings.Controls.Clear();
             foreach (Message ms in this.messages) {
                 MessageView ms_V = new MessageView(this.messages.IndexOf(ms));
                 ms_V.Dock = DockStyle.Top;
-                Spisok.Controls.Add(ms_V);
+                ListStrings.Controls.Add(ms_V);
             }
         }
         public void FilterToDate(DateTime filter) {
-            foreach (MessageView ms in Spisok.Controls) {
+            foreach (MessageView ms in ListStrings.Controls) {
                 ms.Visible = (ms.thisDateTime.Year == filter.Year && ms.thisDateTime.Month == filter.Month && ms.thisDateTime.Day == filter.Day);
             }
         }
         public void ShowAllMessage() {
-            foreach (MessageView ms in Spisok.Controls) {
+            foreach (MessageView ms in ListStrings.Controls) {
                 ms.Visible = true;
             }
         }
         public void ResizeAllText() {
             bool lastV;
-            foreach (MessageView ms in Spisok.Controls) {
+            foreach (MessageView ms in ListStrings.Controls) {
                 lastV = ms.Visible;
                 ms.Visible = true;
-                ms.SetText(Spisok.Controls.IndexOf(ms));
+                ms.SetText(ListStrings.Controls.IndexOf(ms));
                 ms.Visible = lastV;
             }
         }
@@ -59,14 +59,14 @@ namespace KME
             this.messages.Add(mess);
             MessageView ms_V = new MessageView(this.messages.IndexOf(mess));
             ms_V.Dock = DockStyle.Top;
-            Spisok.Controls.Add(ms_V);
+            ListStrings.Controls.Add(ms_V);
         }
         public void RedactMessage(Message ind, int oldID) {
             SpawnAllMessages(); ResizeAllText();
         }
 
         XElement plr, dan, tva;
-        List<XAttribute> Atriguts = new List<XAttribute>(), Textse = new List<XAttribute>();
+        List<XAttribute> Attributs = new List<XAttribute>(), Textse = new List<XAttribute>();
         List<XElement> messagesxml, textxml;
         List<TextBody> txb = new List<TextBody>();
         DateTime vremya;
@@ -105,10 +105,10 @@ namespace KME
             plr = new XElement("Player");
             if (!Directory.Exists("C://ABCGames")) { Directory.CreateDirectory("C://ABCGames"); }
             foreach (Message ms in this.messages) {
-                Atriguts.Add(new XAttribute("Zagalovok", ms.Zagalovok));
-                Atriguts.Add(new XAttribute("Vajnoe", (ms.Vajnoe)?"1":"0"));
-                Atriguts.Add(new XAttribute("DaTi", ms.TimeDate.Year + "|" + ms.TimeDate.Month + "|" + ms.TimeDate.Day + "|" + ms.TimeDate.Hour + "|" + ms.TimeDate.Minute + "|" + ms.TimeDate.Second));
-                dan = new XElement("message", Atriguts); 
+                Attributs.Add(new XAttribute("Zagalovok", ms.TittleName));
+                Attributs.Add(new XAttribute("Vajnoe", (ms.MainMessage)?"1":"0"));
+                Attributs.Add(new XAttribute("DaTi", ms.TimeDate.Year + "|" + ms.TimeDate.Month + "|" + ms.TimeDate.Day + "|" + ms.TimeDate.Hour + "|" + ms.TimeDate.Minute + "|" + ms.TimeDate.Second));
+                dan = new XElement("message", Attributs); 
                 foreach (TextBody tb in ms.Textes) {
                     if (tb.GetType().ToString() == "KME.TextBody") {
                         Textse.Add(new XAttribute("checket", "-1"));
@@ -119,7 +119,7 @@ namespace KME
                     tva = new XElement("texts", "--", Textse);
                     dan.Add(tva); Textse.Clear();
                 }
-                plr.Add(dan); Atriguts.Clear();
+                plr.Add(dan); Attributs.Clear();
             }
             File.WriteAllText(this.Address, plr.ToString());
         }

@@ -34,45 +34,45 @@ namespace KME
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageList));
-            this.Zagalovok = new System.Windows.Forms.Label();
-            this.PoleLista = new System.Windows.Forms.Panel();
+            this.TittleName = new System.Windows.Forms.Label();
+            this.FieldList = new System.Windows.Forms.Panel();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
-            this.AdNeMe = new System.Windows.Forms.Button();
+            this.AddNotMe = new System.Windows.Forms.Button();
             this.AllMessages = new System.Windows.Forms.Button();
             this.ArchiveButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.findTextBox = new System.Windows.Forms.TextBox();
-            this.PushUvedoml = new System.Windows.Forms.NotifyIcon(this.components);
+            this.PushActives = new System.Windows.Forms.NotifyIcon(this.components);
             this.MainMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Zagalovok
             // 
-            this.Zagalovok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Zagalovok.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Zagalovok.Location = new System.Drawing.Point(3, 3);
-            this.Zagalovok.Name = "Zagalovok";
-            this.Zagalovok.Size = new System.Drawing.Size(327, 25);
-            this.Zagalovok.TabIndex = 0;
-            this.Zagalovok.Text = "label1";
-            this.Zagalovok.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Zagalovok.BackColor = Color.FromArgb(255, 255, 230);
+            this.TittleName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TittleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TittleName.Location = new System.Drawing.Point(3, 3);
+            this.TittleName.Name = "Zagalovok";
+            this.TittleName.Size = new System.Drawing.Size(327, 25);
+            this.TittleName.TabIndex = 0;
+            this.TittleName.Text = "label1";
+            this.TittleName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TittleName.BackColor = Color.FromArgb(255, 255, 230);
             // 
             // PoleLista
             // 
-            this.PoleLista.AutoScroll = true;
-            this.PoleLista.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PoleLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PoleLista.Location = new System.Drawing.Point(3, 78);
-            this.PoleLista.Name = "PoleLista";
-            this.PoleLista.Size = new System.Drawing.Size(327, 299);
-            this.PoleLista.TabIndex = 1;
-            this.PoleLista.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.PoleLista_MouseDoubleClick);
+            this.FieldList.AutoScroll = true;
+            this.FieldList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.FieldList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FieldList.Location = new System.Drawing.Point(3, 78);
+            this.FieldList.Name = "PoleLista";
+            this.FieldList.Size = new System.Drawing.Size(327, 299);
+            this.FieldList.TabIndex = 1;
+            this.FieldList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.PoleLista_MouseDoubleClick);
             // 
             // MainMenuPanel
             // 
             this.MainMenuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MainMenuPanel.Controls.Add(this.AdNeMe);
+            this.MainMenuPanel.Controls.Add(this.AddNotMe);
             this.MainMenuPanel.Controls.Add(this.AllMessages);
             this.MainMenuPanel.Controls.Add(this.ArchiveButton);
             this.MainMenuPanel.Controls.Add(this.FindButton);
@@ -85,13 +85,13 @@ namespace KME
             // 
             // AdNeMe
             // 
-            this.AdNeMe.Location = new System.Drawing.Point(185, 25);
-            this.AdNeMe.Name = "AdNeMe";
-            this.AdNeMe.Size = new System.Drawing.Size(54, 20);
-            this.AdNeMe.TabIndex = 4;
-            this.AdNeMe.Text = "+";
-            this.AdNeMe.UseVisualStyleBackColor = true;
-            this.AdNeMe.Click += new System.EventHandler(this.AdNeMe_Click);
+            this.AddNotMe.Location = new System.Drawing.Point(185, 25);
+            this.AddNotMe.Name = "AdNeMe";
+            this.AddNotMe.Size = new System.Drawing.Size(54, 20);
+            this.AddNotMe.TabIndex = 4;
+            this.AddNotMe.Text = "+";
+            this.AddNotMe.UseVisualStyleBackColor = true;
+            this.AddNotMe.Click += new System.EventHandler(this.AdNeMe_Click);
             // 
             // AllMessages
             // 
@@ -132,17 +132,17 @@ namespace KME
             // 
             // PushUvedoml
             // 
-            this.PushUvedoml.Icon = ((System.Drawing.Icon)(resources.GetObject("PushUvedoml.Icon")));
-            this.PushUvedoml.Text = "KME";
-            this.PushUvedoml.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PushUvedoml_MouseDoubleClick);
+            this.PushActives.Icon = ((System.Drawing.Icon)(resources.GetObject("PushUvedoml.Icon")));
+            this.PushActives.Text = "KME";
+            this.PushActives.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PushUvedoml_MouseDoubleClick);
             // 
             // MessageList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PoleLista);
+            this.Controls.Add(this.FieldList);
             this.Controls.Add(this.MainMenuPanel);
-            this.Controls.Add(this.Zagalovok);
+            this.Controls.Add(this.TittleName);
             this.Name = "MessageList";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Size = new System.Drawing.Size(333, 380);
@@ -157,15 +157,15 @@ namespace KME
             if (this.Application != null)
             {
                 this.Application.WindowState = System.Windows.Forms.FormWindowState.Normal;
-                if (this.PushUvedoml.BalloonTipTitle == "КME осталось 48 часов")
+                if (this.PushActives.BalloonTipTitle == "КME осталось 48 часов")
                 {
                     this.Application.SelectDay(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day + 2);
                 }
-                if (this.PushUvedoml.BalloonTipTitle == "КME осталось 24 часа")
+                if (this.PushActives.BalloonTipTitle == "КME осталось 24 часа")
                 {
                     this.Application.SelectDay(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day + 1);
                 }
-                if (this.PushUvedoml.BalloonTipTitle == "КME остался 1 час")
+                if (this.PushActives.BalloonTipTitle == "КME остался 1 час")
                 {
                     this.Application.SelectDay(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 }
@@ -174,15 +174,15 @@ namespace KME
 
         #endregion
 
-        private System.Windows.Forms.Label Zagalovok;
+        private System.Windows.Forms.Label TittleName;
         private System.Windows.Forms.Panel MainMenuPanel;
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.TextBox findTextBox;
         private System.Windows.Forms.Button ArchiveButton;
-        public System.Windows.Forms.Panel PoleLista;
+        public System.Windows.Forms.Panel FieldList;
         private System.Windows.Forms.Button AllMessages;
-        public System.Windows.Forms.NotifyIcon PushUvedoml;
-        private System.Windows.Forms.Button AdNeMe;
+        public System.Windows.Forms.NotifyIcon PushActives;
+        private System.Windows.Forms.Button AddNotMe;
         public Form1 Application;
     }
 }

@@ -15,5 +15,10 @@ namespace KME
         {
             InitializeComponent();
         }
+
+        private void OkBUT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

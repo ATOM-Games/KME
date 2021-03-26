@@ -34,8 +34,8 @@
             this.OK_button = new System.Windows.Forms.Button();
             this.AddChek = new System.Windows.Forms.Button();
             this.AddText = new System.Windows.Forms.Button();
-            this.Glavnaya = new System.Windows.Forms.CheckBox();
-            this.Zagalovok = new System.Windows.Forms.TextBox();
+            this.MainText = new System.Windows.Forms.CheckBox();
+            this.TittleName = new System.Windows.Forms.TextBox();
             this.WorkPage = new System.Windows.Forms.Panel();
             this.inWorkPage = new System.Windows.Forms.Panel();
             this.Plus = new System.Windows.Forms.Button();
@@ -50,8 +50,8 @@
             this.MainMenu.Controls.Add(this.OK_button);
             this.MainMenu.Controls.Add(this.AddChek);
             this.MainMenu.Controls.Add(this.AddText);
-            this.MainMenu.Controls.Add(this.Glavnaya);
-            this.MainMenu.Controls.Add(this.Zagalovok);
+            this.MainMenu.Controls.Add(this.MainText);
+            this.MainMenu.Controls.Add(this.TittleName);
             this.MainMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
@@ -104,34 +104,34 @@
             // 
             // Glavnaya
             // 
-            this.Glavnaya.AutoSize = true;
-            this.Glavnaya.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Glavnaya.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Glavnaya.FlatAppearance.BorderSize = 4;
-            this.Glavnaya.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.Glavnaya.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Glavnaya.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.Glavnaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Glavnaya.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Glavnaya.Location = new System.Drawing.Point(541, 36);
-            this.Glavnaya.Name = "Glavnaya";
-            this.Glavnaya.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Glavnaya.Size = new System.Drawing.Size(92, 20);
-            this.Glavnaya.TabIndex = 1;
-            this.Glavnaya.Text = "Важное";
-            this.Glavnaya.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Glavnaya.UseVisualStyleBackColor = true;
-            this.Glavnaya.CheckedChanged += new System.EventHandler(this.Glavnaya_CheckedChanged);
+            this.MainText.AutoSize = true;
+            this.MainText.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MainText.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.MainText.FlatAppearance.BorderSize = 4;
+            this.MainText.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.MainText.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.MainText.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.MainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainText.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MainText.Location = new System.Drawing.Point(541, 36);
+            this.MainText.Name = "Glavnaya";
+            this.MainText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MainText.Size = new System.Drawing.Size(92, 20);
+            this.MainText.TabIndex = 1;
+            this.MainText.Text = "Важное";
+            this.MainText.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MainText.UseVisualStyleBackColor = true;
+            this.MainText.CheckedChanged += new System.EventHandler(this.Glavnaya_CheckedChanged);
             // 
             // Zagalovok
             // 
-            this.Zagalovok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.Zagalovok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Zagalovok.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Zagalovok.Location = new System.Drawing.Point(5, 5);
-            this.Zagalovok.Name = "Zagalovok";
-            this.Zagalovok.Size = new System.Drawing.Size(628, 31);
-            this.Zagalovok.TabIndex = 0;
+            this.TittleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.TittleName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TittleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TittleName.Location = new System.Drawing.Point(5, 5);
+            this.TittleName.Name = "Zagalovok";
+            this.TittleName.Size = new System.Drawing.Size(628, 31);
+            this.TittleName.TabIndex = 0;
             // 
             // WorkPage
             // 
@@ -190,8 +190,8 @@
 
         void Glavnaya_CheckedChanged(object sender, System.EventArgs e)
         {
-            this.Zagalovok.ForeColor = (this.Glavnaya.Checked) ? System.Drawing.Color.Red : System.Drawing.Color.Black;
-            this.Zagalovok.BackColor = (this.Glavnaya.Checked) ? System.Drawing.Color.FromArgb(255, 255, 230, 230) : System.Drawing.Color.FromArgb(255, 230, 230, 255);
+            this.TittleName.ForeColor = (this.MainText.Checked) ? System.Drawing.Color.Red : System.Drawing.Color.Black;
+            this.TittleName.BackColor = (this.MainText.Checked) ? System.Drawing.Color.FromArgb(255, 255, 230, 230) : System.Drawing.Color.FromArgb(255, 230, 230, 255);
         }
 
         
@@ -201,8 +201,8 @@
         #endregion
 
         private System.Windows.Forms.Panel MainMenu;
-        private System.Windows.Forms.TextBox Zagalovok;
-        private System.Windows.Forms.CheckBox Glavnaya;
+        private System.Windows.Forms.TextBox TittleName;
+        private System.Windows.Forms.CheckBox MainText;
         private System.Windows.Forms.Button AddText;
         private System.Windows.Forms.Button AddChek;
         private System.Windows.Forms.Button Plus;

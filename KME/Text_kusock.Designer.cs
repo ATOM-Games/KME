@@ -32,7 +32,7 @@ namespace KME
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lasee = new System.Windows.Forms.Label();
+            this.LabelLocale = new System.Windows.Forms.Label();
             this.DeletButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,16 +45,16 @@ namespace KME
             this.textBox1.Name = "textBox1";
             this.textBox1.TabIndex = 0;
             this.textBox1.ShortcutsEnabled = false;
-            this.textBox1.TextChanged += new System.EventHandler(delegate { this.lasee.Text = this.textBox1.Text; });
+            this.textBox1.TextChanged += new System.EventHandler(delegate { this.LabelLocale.Text = this.textBox1.Text; });
 
-            this.lasee.AutoSize = true;
-            this.lasee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lasee.Padding = new System.Windows.Forms.Padding(5);
-            this.lasee.Name = "label1";
-            this.lasee.Size = new System.Drawing.Size(0, 13);
-            this.lasee.Text = "";
-            this.lasee.ForeColor = System.Drawing.Color.Transparent;
-            this.lasee.Resize += new System.EventHandler(delegate { this.Height = this.lasee.Height; });
+            this.LabelLocale.AutoSize = true;
+            this.LabelLocale.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LabelLocale.Padding = new System.Windows.Forms.Padding(5);
+            this.LabelLocale.Name = "label1";
+            this.LabelLocale.Size = new System.Drawing.Size(0, 13);
+            this.LabelLocale.Text = "";
+            this.LabelLocale.ForeColor = System.Drawing.Color.Transparent;
+            this.LabelLocale.Resize += new System.EventHandler(delegate { this.Height = this.LabelLocale.Height; });
 
 
             this.DeletButton.Size = new System.Drawing.Size(20,20);
@@ -78,7 +78,7 @@ namespace KME
             this.BackColor = System.Drawing.Color.Aqua;
             this.Controls.Add(this.DeletButton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lasee);
+            this.Controls.Add(this.LabelLocale);
             this.Name = "Text_kusock";
             this.MinimumSize = new System.Drawing.Size(100, 20);
             this.ResumeLayout(false);
@@ -98,7 +98,7 @@ namespace KME
         #endregion
 
         public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.Label lasee;
+        public System.Windows.Forms.Label LabelLocale;
         public System.Windows.Forms.Button DeletButton;
     }
 }

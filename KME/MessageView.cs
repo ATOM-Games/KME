@@ -25,10 +25,10 @@ namespace KME
 
         public void SetText(int mess) {
             this.thisDateTime = MessageControl.msContr.messages[mess].TimeDate;
-            this.Zagalovok.Text = MessageControl.msContr.messages[mess].Zagalovok;
-            this.Vremya.Text = "[" + this.thisDateTime.Hour + " : " + this.thisDateTime.Minute + " : " + this.thisDateTime.Second + "]";
-            TImeMeess.SetToolTip(this.Vremya, "[ " + this.thisDateTime.Day + " " + Months.Monthes[this.thisDateTime.Month, 1] + " " + this.thisDateTime.Year + " года " + this.thisDateTime.Hour + " : " + this.thisDateTime.Minute + " : " + this.thisDateTime.Second + " ]");
-            if (MessageControl.msContr.messages[mess].Vajnoe) { this.Zagalovok.BackColor = Color.Red; }
+            this.TittleName.Text = MessageControl.msContr.messages[mess].TittleName;
+            this.TimeLocal.Text = "[" + this.thisDateTime.Hour + " : " + this.thisDateTime.Minute + " : " + this.thisDateTime.Second + "]";
+            TImeMeess.SetToolTip(this.TimeLocal, "[ " + this.thisDateTime.Day + " " + Months.Monthes[this.thisDateTime.Month, 1] + " " + this.thisDateTime.Year + " года " + this.thisDateTime.Hour + " : " + this.thisDateTime.Minute + " : " + this.thisDateTime.Second + " ]");
+            if (MessageControl.msContr.messages[mess].MainMessage) { this.TittleName.BackColor = Color.Red; }
 
             this.ContentMessage.Controls.Clear();
             if (this.Width > 500) {
@@ -80,7 +80,7 @@ namespace KME
             if (df.ShowDialog() == DialogResult.OK)
             {
                 df.Close();
-                MessageControl.msContr.Spisok.Controls.Remove(this);
+                MessageControl.msContr.ListStrings.Controls.Remove(this);
                 MessageControl.msContr.messages.Remove(sss);
             }
         }
